@@ -67,6 +67,8 @@ function calcularCombustivel() {
     // LIMPA OS ALERTAS
     document.getElementById("alerta_combustivel").textContent = '';
     document.getElementById("resultado_combustivel").textContent = '';
+    document.getElementById("contaGasolina").textContent = '';
+    document.getElementById("contaAlcool").textContent = '';
 
     // OBTENÇÃO DOS VALORES
     let gasolinaPreco = parseFloat(document.getElementById("gasolinaPreco").value);
