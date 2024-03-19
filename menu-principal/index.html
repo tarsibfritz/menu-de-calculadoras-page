@@ -30,11 +30,13 @@
             <h2>Sobre o projeto</h2>
             <div class="project_description">
               <p>Projeto desenvolvido para o curso de Programador FullStack do Rio Pomba Valley.</p>
+              <hr/>
               <p class="subtitle">Contexto</p>
               <p>Uma empresa de desenvolvimento de software foi contratada para criar uma aplicação que ofereça três funcionalidades diferentes com base na escolha do usuário. As funcionalidades são: uma calculadora básica,
                 uma calculadora de Índice de Massa Corporal (IMC) e uma calculadora de combustível (gasolina/álcool).
                 Para facilitar a interação do usuário, a aplicação será desenvolvida em uma página HTML com um menu inicial que apresenta as opções disponíveis. A partir da escolha do usuário, a aplicação deve exibir um
                 formulário específico para cada funcionalidade escolhida.</p>
+                <hr/>
               <p class="subtitle">Desafio</p>
               <p>Desenvolver uma aplicação web que ofereça três funcionalidades diferentes com base na escolha do usuário. As funcionalidades são: uma calculadora básica, uma calculadora de IMC e uma calculadora de
                 combustível (gasolina/álcool).</p>
@@ -42,21 +44,30 @@
         </div>
         <div class="project_members">
           <h3>Participantes:</h3>
-          <p>Maria Alice</p>
+          <p>Maria Alice Oliveira</p>
           <a href="https://www.linkedin.com/in/maria-alice-oliveira-972a77290/">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
-          </svg>
+            <img class="linkedin-icon" src="./assets/linkedin.svg" alt="ícone do linkedin de Maria Alice Oliveira">
           </a>
           <p>Mayra Pacheco</p>
+          <a href="https://www.linkedin.com/in/mayra-pacheco-86a835210/">
+            <img class="linkedin-icon" src="./assets/linkedin.svg" alt="ícone do linkedin de Mayra Pacheco">
+          </a>
           <p>Tarsila Barros Fritz</p>
-    
+          <a href="https://www.linkedin.com/in/tarsibfritz/">
+            <img class="linkedin-icon" src="./assets/linkedin.svg" alt="ícone do linkedin de Tarsila Barros Fritz">
+          </a>
+          <a href="https://github.com/tarsibfritz">
+            <img class="github-icon" src="./assets/github.svg" alt="ícone do github de Tarsila Barros Fritz">
+          </a>
         </div>
     </section>
 
     <!--CALCULADORA BASICA-->
     <section id="calculadoraBasica">
       <div class="background-calculadora">
+        <div>
+            <h1>Calculadora Básica</h1>
+        </div>
         <input type="text" class="display"/>
         <div class="buttons">
             <!--PRIMEIRA FILEIRA-->
@@ -126,11 +137,11 @@
           <!--PESO E ALTURA PARA CALCULAR O IMC-->
           <div class="itens-imc">
             <label>Peso (em kg):</label>
-            <input id="pesoIMC" placeholder="Digite seu peso" />
+            <input id="pesoIMC" placeholder="Digite o peso (kg)" />
           </div>
           <div class="itens-imc">
-            <label>Altura (em metros)</label>
-            <input id="alturaIMC" placeholder="Digite sua altura" />
+            <label>Altura (em metros):</label>
+            <input id="alturaIMC" placeholder="Digite a altura (m)" />
           </div>
           <!--BOTÃO PARA CALCULAR O IMC-->
           <button type="button" onclick="calcularIMC()">Calcular IMC</button>

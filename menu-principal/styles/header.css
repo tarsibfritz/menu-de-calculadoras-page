@@ -14,13 +14,13 @@ h1{
 }
 
 .title{
-    padding: 25px;
+    padding: 22px;
     background-color: var(--main-color); 
 }
 
 .cabecalho{
     text-align: center;    
-    background-color: var(--pinkish-color);
+    background-color: var(--light-green);
 }
 
 .general-button{
@@ -30,9 +30,14 @@ h1{
     font-size: 14px;
     font-weight: bold;
     color: var(--light-color);
-    background-color: var(--pinkish-color);
+    background-color: var(--light-green);
     border: none;
     border-radius: 5rem;
+}
+
+.general-button:hover{
+    background-color: var(--main-color);
+    transform: scale(0.99);
 }
 
 footer{
@@ -57,9 +62,13 @@ h3{
     color: var(--main-color);
 }
 
+hr{
+    margin-top: 15px;
+}
+
 .project{
     display: inline-block;
-    width: 40rem;
+    width: 45rem;
     padding: 13px;
     margin-left: 80px;
     margin-top: 35px;
@@ -83,7 +92,7 @@ h3{
 .project_members{
     position: absolute;
     display: inline-block;
-    width: 25rem;
+    width: 20rem;
     padding: 13px;
     margin-left: 45px;
     margin-top: 35px;
@@ -92,7 +101,18 @@ h3{
     background: var(--box-color);
 }
 
-svg{
+.linkedin-icon, .github-icon{
     width: 20px;
-    display: inline-block;
 }
+
+/* RESPONSIVIDADE
+@media (max-width: 1000px){
+    .project{
+        display: block;
+        width: 45rem;
+        margin-left: 20px;
+        margin-top: 35px;
+        margin-bottom: 100px;
+    }
+}
+*/

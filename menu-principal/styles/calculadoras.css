@@ -11,6 +11,7 @@
     justify-content: center;
     margin-top: 2%;
     margin-left: 38%;
+    margin-bottom: 5%;
 }
 
 .background-calculadora{
@@ -80,6 +81,7 @@ input.display{
     margin-top: 15px;
     color: #eee;
     text-align: center;
+    font-weight: bold;
 }
 
 .form-combustivel button{
@@ -92,8 +94,13 @@ input.display{
     cursor: pointer;
     font-weight: bolder;
     text-align: center;
-    color: var(--pinkish-color);
+    color: var(--light-green);
     background-color: var(--light-color);
+}
+
+.form-combustivel button:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.99);
 }
 
 .form-combustivel input{
@@ -137,6 +144,7 @@ input.display{
     margin-top: 15px;
     color: #eee;
     text-align: center;
+    font-weight: bold;
 }
 
 .form-imc button{
@@ -149,12 +157,17 @@ input.display{
     cursor: pointer;
     font-weight: bolder;
     text-align: center;
-    color: var(--pinkish-color);
+    color: var(--light-green);
     background-color: var(--light-color);
 }
 
+.form-imc button:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.99);
+}
+
 .form-imc input{
-    width: 100px;
+    width: 130px;
     padding: 2px;
     border: none;
     border-radius: 2px;

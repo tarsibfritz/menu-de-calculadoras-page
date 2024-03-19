@@ -14,48 +14,57 @@ function abrirMenuPrincipal(){
 // ABRIR CALCULADORAS
 function abrirCalculadora(calculadora){
     // ESCONDER O MENU
-    document.getElementById("menuPrincipal").style.display='none';
+    document.getElementById("menuPrincipal").style.display='none'; // DEIXA O CSS DO MENU PRINCIPAL OCULTADO
     // ESCONDER TODAS AS SEÇÕES DE CALCULADORA
-    var calculadoras = document.querySelectorAll('section');
-    calculadoras.forEach(function (calc) {
-        calc.style.display = 'none';
+    let calculadoras = document.querySelectorAll('section'); // OBTEM TODAS AS SEÇÕES
+    calculadoras.forEach(function (calc) { 
+        calc.style.display = 'none'; // OCULTA O CSS DAS SEÇÕES/CALCULADORAS
     });
 
     //EXIBIR APENAS A SEÇÃO DA CALCULADORA SELECIONADA
-    document.getElementById(calculadora).style.display = 'block';
-    
+    document.getElementById(calculadora).style.display = 'block';   
 }
 
 // CALCULADORA BÁSICA
-function calculadoraPadrao() {
-    const display = document.querySelector('.display');
-    const buttons = document.querySelectorAll('.buttons button');
+let display = document.querySelector('.display'); // CONSTANTE 'display' RECEBE UM RESULTADO ENCRONTRADO NO HTML
+let buttons = document.querySelectorAll('button');  // CONSTANTE 'button' RECEBE TODOS OS ELEMENTOS BUTTON
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            const value = button.getAttribute('data-value');
+function calcularPorcentagem(number){
+    return number / 100;
+}
 
-            if (value === 'AC') {
-                display.value = '';
-            } else if (value === 'DEL') {
-                display.value = display.value.slice(0, -1);
-            } else if (value === '=') {
-                try {
-                    display.value = eval(display.value);
-                } catch (error) {
-                    display.value = 'Erro';
+// LOOP QUE ITERA CADA ELEMENTO DA LISTA 'buttons'
+buttons.forEach(button => { 
+    button.addEventListener('click', function () { // ADICIONA O EVENTO DE CLIQUE
+        let value = button.getAttribute('data-value'); // OBTEM O VALOR DO ATRIBUTO DO BOTÃO CLICADO
+
+        if (value === 'AC') { 
+            display.value = '';  // LIMPAR TUDO
+        } else if (value === 'DEL') {
+            display.value = display.value.slice(0, -1); // EXCLUI O ÚLTIMO CARACTERE
+        } else if (value === '=') {
+            try {
+                if (display.value.includes('%')){  // SE USAR O ELEMENTO % = CALCULE PORCENTAGEM
+                    const number = parseFloat(display.value.replace('%', ''));
+                    display.value = calcularPorcentagem(number);
+                } else{
+                    display.value = eval(display.value);  // CASO CONTRÁRIO = EXECUTAR O CÓDIGO
                 }
-            } else {
-                display.value += value;
+            } catch (error) {
+                display.value = 'Erro';
             }
-        });
+        } else if (value === null){
+            display.value = ''; // INICIALIZA COM DISPLAY VAZIO
+        } else {
+            display.value += value;  // PEGA O VALOR ATUAL DO DISPLAY DA CALCULADORA E CONCATENA O VALOR DO BOTÃO CLICADO A ELE (ADICIONA O VALOR DO BOTÃO CLICADO AO FINAL DO VALOR ATUAL DO VISOR)
+        }
     });
-};
+});
 
 // CALCULADORA DE COMBUSTÍVEL
 function calcularCombustivel() {
 
-    // LIMPAR ALERTA
+    // LIMPA OS ALERTAS
     document.getElementById("alerta_combustivel").textContent = '';
     document.getElementById("resultado_combustivel").textContent = '';
 
@@ -95,7 +104,7 @@ function calcularCombustivel() {
 // CALCULADORA DE IMC
 function calcularIMC() {
 
-    // LIMPAR ALERTA
+    // LIMPAR OS ALERTAS
     document.getElementById("alerta_imc").textContent = '';
     document.getElementById("resultado_imc").textContent = '';
 
