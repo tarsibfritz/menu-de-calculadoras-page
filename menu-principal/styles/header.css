@@ -5,24 +5,22 @@
 
 body{
     font-family: var(--font-roboto);
+    background-color: #EEEEEE;
 }
 
 h1{
     text-align: center;
+    color: var(--light-color);
 }
 
 .title{
     padding: 25px;
-    background-color: grey;
+    background-color: var(--main-color); 
 }
 
 .cabecalho{
-    text-align: center;
-    background-color: lightblue;
-}
-
-.menu{
-    display: inline-block;
+    text-align: center;    
+    background-color: var(--pinkish-color);
 }
 
 .general-button{
@@ -31,16 +29,70 @@ h1{
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
+    color: var(--light-color);
+    background-color: var(--pinkish-color);
     border: none;
     border-radius: 5rem;
-    background-color: coral;
 }
 
-.rodape{
-    position: absolute;
+footer{
+    position: fixed;
     bottom: 0;
     width: 100%;
     padding: 11px;
     text-align: center;
-    background-color: coral;
+    color: var(--light-color);
+    background-color: var(--main-color);
+}
+
+/* MENU PRINCIPAL */
+h2{
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+h3{
+    font-size: 15px;
+    color: var(--main-color);
+}
+
+.project{
+    display: inline-block;
+    width: 40rem;
+    padding: 13px;
+    margin-left: 80px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    background-color: var(--box-color);
+}
+
+.project_description{
+    margin-top: 15px;
+}
+
+.project_description p{
+    margin-top: 5px;
+}
+
+.subtitle{
+    font-weight: bold;
+}
+
+.project_members{
+    position: absolute;
+    display: inline-block;
+    width: 25rem;
+    padding: 13px;
+    margin-left: 45px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    background: var(--box-color);
+}
+
+svg{
+    width: 20px;
+    display: inline-block;
 }

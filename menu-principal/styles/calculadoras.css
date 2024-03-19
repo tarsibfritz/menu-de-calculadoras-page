@@ -1,4 +1,172 @@
 /* ESTILO PARA ESCONDER AS CALCULADORAS (PADRÃO) */
-#calculadoraIMC{
+#calculadoraBasica, #calculadoraCombustivel, #calculadoraIMC {
     display: none;
+}
+
+/* CALCULADORA BÁSICA */
+#calculadoraBasica{
+    display: flex;
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 38%;
+}
+
+.background-calculadora{
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--main-color);
+}
+
+input.display{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #000e1a;
+    pointer-events: none;
+}
+
+.buttons{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button{
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.buttons button:active{
+    transform: scale(0.99);
+}
+
+/* CALCULADORA DE COMBUSTÍVEL */
+#calculadoraCombustivel{
+    display: flex;
+    max-width: 450px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 32%;
+}
+
+.background-combustivel{
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--main-color);
+}
+
+.background-combustivel h1{
+    margin-top: 15px;
+}
+
+.form-combustivel{
+    margin-top: 15px;
+    color: #eee;
+    text-align: center;
+}
+
+.form-combustivel button{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--pinkish-color);
+    background-color: var(--light-color);
+}
+
+.form-combustivel input{
+    width: 90px;
+    padding: 2px;
+    border: none;
+    border-radius: 2px;
+}
+
+.itens-combustivel{
+    margin-top: 9px;
+}
+
+#alerta_combustivel, #resultado_combustivel, #contaGasolina, #contaAlcool{
+    position: relative;
+    margin-top: 6px;
+    text-align: center;
+    color: var(--light-color);
+}
+
+/*CALCULADORA DE IMC*/
+#calculadoraIMC{
+    display: flex;
+    max-width: 450px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 32%;
+}
+
+.background-imc{
+        position: relative;
+        width: 100%;
+        border-radius: 12px;
+        padding: 10px 20px 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        background-color: var(--main-color);
+}
+
+.form-imc{
+    margin-top: 15px;
+    color: #eee;
+    text-align: center;
+}
+
+.form-imc button{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--pinkish-color);
+    background-color: var(--light-color);
+}
+
+.form-imc input{
+    width: 100px;
+    padding: 2px;
+    border: none;
+    border-radius: 2px;
+}
+
+.itens-imc{
+    margin-top: 9px;
+}
+
+#alerta_imc, #resultado_imc{
+    position: relative;
+    margin-top: 6px;
+    text-align: center;
+    color: var(--light-color);
 }

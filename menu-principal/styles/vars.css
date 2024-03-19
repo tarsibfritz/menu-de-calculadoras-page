@@ -1,4 +1,10 @@
 :root{
     /* FONT */
     --font-roboto: "Roboto", sans-serif;
+
+    /* COLORS */
+    --main-color: #627254;
+    --pinkish-color: #76885B;
+    --light-color: #fff; 
+    --box-color: #DDDDDD;
 }
