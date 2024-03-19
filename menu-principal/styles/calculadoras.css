@@ -1,0 +1,4 @@
+/* ESTILO PARA ESCONDER AS CALCULADORAS (PADRÃO) */
+#calculadoraIMC{
+    display: none;
+}

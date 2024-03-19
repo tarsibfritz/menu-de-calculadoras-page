@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Combustível</title>
+</head>
+<body>
+    <div class="background-combustivel">
+        <form class="form-combustivel">
+            <h1>Calculadora de Combustível</h1>
+            <div class="itens-combustivel">
+                <label>Preço da gasolina (em litros):</label>
+                <input id="gasolinaPreco" placeholder="Digite o preço do litro da gasolina">
+            </div>
+            <div class="itens-combustivel">
+                <label>Preço do álcool (em litros):</label>
+                <input id="alcoolPreco" placeholder="Digite o preço do litro do álcool">
+            </div>
+            <div class="itens-combustivel">
+                <label>Quantidade de litros de gasolina abastecida:</label>
+                <input id="qtdGasolina" placeholder="Digite a quantidade de litros abastecidos">
+            </div>
+            <div class="itens-combustivel">
+                <label>Quantidade de litros de álcool abastecido:</label>
+                <input id="qtdAlcool" placeholder="Digite a quantidade de litros abastecidos">
+            </div>
+            <button type="button" onclick="calcularCombustivel()">Calcular Combustível</button>
+        </form>
+        <div id="contaGasolina"></div>
+        <div id="contaAlcool"></div>
+        <div id="resultado"></div>
+        <div id="alerta"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font-roboto);
+}
+
+h1{
+    text-align: center;
+}
+
+.title{
+    padding: 25px;
+    background-color: grey;
+}
+
+.cabecalho{
+    text-align: center;
+    background-color: lightblue;
+}
+
+.menu{
+    display: inline-block;
+}
+
+.general-button{
+    padding: 8px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5rem;
+    background-color: coral;
+}
+
+.rodape{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 11px;
+    text-align: center;
+    background-color: coral;
+}
