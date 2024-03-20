@@ -14,11 +14,11 @@ function abrirMenuPrincipal(){
 // ABRIR CALCULADORAS
 function abrirCalculadora(calculadora){
     // ESCONDER O MENU
-    document.getElementById("menuPrincipal").style.display='none'; // DEIXA O CSS DO MENU PRINCIPAL OCULTADO
+    document.getElementById("menuPrincipal").style.display='none';
     // ESCONDER TODAS AS SEÇÕES DE CALCULADORA
-    let calculadoras = document.querySelectorAll('section'); // OBTEM TODAS AS SEÇÕES
+    let calculadoras = document.querySelectorAll('section');
     calculadoras.forEach(function (calc) { 
-        calc.style.display = 'none'; // OCULTA O CSS DAS SEÇÕES/CALCULADORAS
+        calc.style.display = 'none';
     });
 
     //EXIBIR APENAS A SEÇÃO DA CALCULADORA SELECIONADA
@@ -26,7 +26,7 @@ function abrirCalculadora(calculadora){
 }
 
 // CALCULADORA BÁSICA
-let display = document.querySelector('.display'); // CONSTANTE 'display' RECEBE UM RESULTADO ENCRONTRADO NO HTML
+let display = document.querySelector('.display'); // CONSTANTE 'display' RECEBE UM RESULTADO ENCONTRADO NO HTML
 let buttons = document.querySelectorAll('button');  // CONSTANTE 'button' RECEBE TODOS OS ELEMENTOS BUTTON
 
 function calcularPorcentagem(number){
@@ -48,7 +48,12 @@ buttons.forEach(button => {
                     const number = parseFloat(display.value.replace('%', ''));
                     display.value = calcularPorcentagem(number);
                 } else{
-                    display.value = eval(display.value);  // CASO CONTRÁRIO = EXECUTAR O CÓDIGO
+                    let result = eval(display.value);
+                    if (result === Infinity || result === -Infinity) { // VERIFICA SE O RESULTADO É INFINITO
+                        display.value = 'Erro: Divisão por zero';
+                    } else {
+                        display.value = result;
+                    } 
                 }
             } catch (error) {
                 display.value = 'Erro';
@@ -60,6 +65,8 @@ buttons.forEach(button => {
         }
     });
 });
+
+
 
 // CALCULADORA DE COMBUSTÍVEL
 function calcularCombustivel() {

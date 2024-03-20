@@ -94,7 +94,7 @@ input.display{
     cursor: pointer;
     font-weight: bolder;
     text-align: center;
-    color: var(--light-green);
+    color: var(--light-blue);
     background-color: var(--light-color);
 }
 
@@ -157,7 +157,7 @@ input.display{
     cursor: pointer;
     font-weight: bolder;
     text-align: center;
-    color: var(--light-green);
+    color: var(--light-blue);
     background-color: var(--light-color);
 }
 
