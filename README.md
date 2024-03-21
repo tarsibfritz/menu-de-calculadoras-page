@@ -3,6 +3,13 @@ Um projeto desenvolvido para a matéria de Codificação Backend do curso Rio Po
 
 ### 🎯 Objetivo
 - Desenvolver uma aplicação web que ofereça três funcionalidades diferentes com base na escolha do usuário. As funcionalidades são: uma calculadora básica, uma calculadora de IMC e uma calculadora de combustível (gasolina/álcool).
+  
+<p display="inline-block">
+  <img height="300px" src="./assets/imgs/img-menu.png">
+  <img height="400px" src="./assets/imgs/img-basica.png">
+  <img height="400px" src="./assets/imgs/img-combustivel.png">
+  <img height="400px" src="./assets/imgs/img-imc.png"><br>
+</p>
 
 ### ⚙️ Tecnologias Utilizadas
 <div>
