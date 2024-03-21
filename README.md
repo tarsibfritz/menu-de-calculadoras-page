@@ -11,3 +11,7 @@ Um projeto desenvolvido para a matéria de Codificação Backend do curso Rio Po
   <img width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
 </div>
 
+### 👥 Participantes
+- Maria Alice Oliveira
+- Mayra Pacheco
+- Tarsila Barros Fritz
