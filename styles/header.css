@@ -104,15 +104,3 @@ hr{
 .linkedin-icon, .github-icon{
     width: 20px;
 }
-
-/* RESPONSIVIDADE
-@media (max-width: 1000px){
-    .project{
-        display: block;
-        width: 45rem;
-        margin-left: 20px;
-        margin-top: 35px;
-        margin-bottom: 100px;
-    }
-}
-*/
