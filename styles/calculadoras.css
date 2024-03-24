@@ -54,6 +54,20 @@ input.display{
     transform: scale(0.99);
 }
 
+#alerta_divisao{
+    position: absolute;
+    left: 31%;
+    padding: 20px;
+    border: none;
+    border-radius: 6px;
+    z-index: 2;
+    bottom: 220px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: var(--light-color);
+    background-color: #19163bba;
+}
+
 /* CALCULADORA DE COMBUSTÍVEL */
 #calculadoraCombustivel{
     display: flex;

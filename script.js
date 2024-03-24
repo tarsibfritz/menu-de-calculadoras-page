@@ -8,6 +8,7 @@ function abrirMenuPrincipal(){
     document.getElementById("calculadoraBasica").style.display = 'none';
     document.getElementById("calculadoraCombustivel").style.display = 'none';
     document.getElementById("calculadoraIMC").style.display = 'none';
+    document.getElementById("alerta_divisao").style.display = 'none';
 }
 
 
@@ -26,9 +27,15 @@ function abrirCalculadora(calculadora){
 }
 
 // CALCULADORA BÁSICA
+
+// LIMPAR ALERTA
+document.getElementById("alerta_divisao").textContent = '';
+
+// VARIÁVEIS PARA OS ELEMENTOS DO DISPLAY E BUTTON
 let display = document.querySelector('.display'); // CONSTANTE 'display' RECEBE UM RESULTADO ENCONTRADO NO HTML
 let buttons = document.querySelectorAll('button');  // CONSTANTE 'button' RECEBE TODOS OS ELEMENTOS BUTTON
 
+// FUNÇÃO DE PORCENTAGEM
 function calcularPorcentagem(number){
     return number / 100;
 }
@@ -50,7 +57,15 @@ buttons.forEach(button => {
                 } else{
                     let result = eval(display.value);
                     if (result === Infinity || result === -Infinity) { // VERIFICA SE O RESULTADO É INFINITO
-                        display.value = 'Erro: Divisão por zero';
+                        document.getElementById("alerta_divisao").style.display = 'block';
+                        document.getElementById("alerta_divisao").textContent = 'Erro: divisão por zero. Tente novamente.'
+                        display.value = '';
+                        
+                        // FUNÇÃO DE TEMPO DE TELA DO ALERTA:
+                        setTimeout(function() {
+                            document.getElementById("alerta_divisao").style.display = 'none';
+                        }, 1000);
+                        
                     } else {
                         display.value = result;
                     } 
@@ -65,8 +80,6 @@ buttons.forEach(button => {
         }
     });
 });
-
-
 
 // CALCULADORA DE COMBUSTÍVEL
 function calcularCombustivel() {
